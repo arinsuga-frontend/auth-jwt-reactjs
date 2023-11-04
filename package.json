@@ -1,21 +1,23 @@
 {
   "name": "auth-jwt-reactjs",
   "version": "1.0.0",
-  "description": "JWT Authentication ReactJs",
+  "description": "",
   "main": "index.js",
   "directories": {
     "doc": "doc"
   },
   "scripts": {
     "test": "react-scripts test",
-    "start": "react-scripts start",
     "build": "react-scripts build",
+    "start": "react-scripts start",
     "eject": "react-scripts eject"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/react": "^18.2.34",
+    "@types/react-dom": "^18.2.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1"
