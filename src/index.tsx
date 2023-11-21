@@ -3,8 +3,13 @@ import ReactDOM from 'react-dom/client';
 import App from './app';
 import './assets/css/styles.css';
 
-const rootElement = document.getElementById("root");
-const root = ReactDOM.createRoot(rootElement as HTMLElement);
+//pages
+import Layout from './pages/Layout';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+
+const el = document.getElementById("root");
+const root = ReactDOM.createRoot(el as HTMLElement);
 
 root.render(
     <React.StrictMode>
