@@ -5,6 +5,7 @@ const Layout = () => {
     return (
         <>
 
+            <h1>Title Layout</h1>
             <nav>
                 <ul>
                     <li>
@@ -18,6 +19,11 @@ const Layout = () => {
                     <li>
                         <Link to="/contact">Contact us</Link>
                     </li>
+
+                    <li>
+                        <Link to="/task">Task</Link>
+                    </li>
+
                 </ul>
             </nav>
 
