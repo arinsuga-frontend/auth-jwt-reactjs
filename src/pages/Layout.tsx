@@ -21,7 +21,7 @@ const Layout = () => {
                     </li>
 
                     <li>
-                        <Link to="/task">Task</Link>
+                        <Link to="/counter">Counter</Link>
                     </li>
 
                 </ul>
