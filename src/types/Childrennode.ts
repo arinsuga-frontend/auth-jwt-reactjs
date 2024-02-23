@@ -2,7 +2,7 @@ import { ReactNode } from "react"
 
 
 type Childrennode = {
-    children: 'ReactNode'
+    children: ReactNode
 };
 
 export default Childrennode

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTasksDispatch } from '../contexts/TasksContext';
+import Actiontype from '../enums/Actiontype';
 
 export default function AddTask() {
   
@@ -16,7 +17,7 @@ export default function AddTask() {
       <button onClick={() => {
         setText('');
         dispatch({
-          type: 'added',
+          type: Actiontype.Add,
           id: nextId++,
           text: text
         }); 

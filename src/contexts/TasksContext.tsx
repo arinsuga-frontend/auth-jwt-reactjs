@@ -20,13 +20,13 @@ const StatesContext = createContext({})
 const StatesDispatchContext = createContext<Dispatch<Stateaction>>(() => null)
 
 export function TasksProvider({ children }: Childrennode) {
-  const [tasks, dispatch] = useReducer(
+  const [states, dispatch] = useReducer(
     tasksReducer,
     initialStates
   );
 
   return (
-    <StatesContext.Provider value={tasks}>
+    <StatesContext.Provider value={states}>
       <StatesDispatchContext.Provider value={dispatch}>
         {children}
       </StatesDispatchContext.Provider>
@@ -51,6 +51,7 @@ function tasksReducer(states: Statemodel[], action: Stateaction) {
           done: false
         }];
       }
+
       default: {
         throw Error('Unknown action: ' + action.type);
       }
