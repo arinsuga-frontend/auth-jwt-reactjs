@@ -3,8 +3,13 @@ import { createContext, useContext,
 import Childrennode from '../types/Childrennode'
 import Actiontype from '../enums/Actiontype'
 import { default as Statemodel } from '../models/ITaskmodel'
-import { default as Stateaction } from '../types/Taskaction'
 import AddTask from '../components/AddTask'
+
+//State Action
+type Stateaction = {
+  type: string,
+  model: Statemodel   
+}
 
 //Initial state in production can get from database via ajax / async ajax
 const initialStates: Statemodel[] = [
@@ -12,9 +17,6 @@ const initialStates: Statemodel[] = [
     { id: 1, text: 'Visit the temple', done: false },
     { id: 2, text: 'Drink matcha', done: false }
 ];
-
-// const TasksContext = createContext({})
-// const TasksDispatchContext = createContext<Dispatch<Stateaction>>(() => null)
 
 const states: Statemodel[] = [{id: 0}];
 const StatesContext = createContext(states)
