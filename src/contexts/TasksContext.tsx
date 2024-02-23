@@ -2,7 +2,7 @@ import { createContext, useContext,
          useReducer, Dispatch } from 'react'
 import Childrennode from '../types/Childrennode'
 import Actiontype from '../enums/Actiontype'
-import { default as Statemodel } from '../models/Taskmodel'
+import { default as Statemodel } from '../models/ITaskmodel'
 import { default as Stateaction } from '../types/Taskaction'
 import AddTask from '../components/AddTask'
 
@@ -16,7 +16,8 @@ const initialStates: Statemodel[] = [
 // const TasksContext = createContext({})
 // const TasksDispatchContext = createContext<Dispatch<Stateaction>>(() => null)
 
-const StatesContext = createContext({})
+const states: Statemodel[] = [{id: 0}];
+const StatesContext = createContext(states)
 const StatesDispatchContext = createContext<Dispatch<Stateaction>>(() => null)
 
 export function TasksProvider({ children }: Childrennode) {
@@ -46,12 +47,26 @@ function tasksReducer(states: Statemodel[], action: Stateaction) {
     switch (action.type) {
       case Actiontype.Add: {
         return [...states, {
-          id: action.id,
-          text: action.text,
+          id: action.model.id,
+          text: action.model.text,
           done: false
         }];
       }
 
+      case Actiontype.Edit: {
+        return states.map(t => {
+          if (t.id === action.model.id) {
+            return action.model;
+          } else {
+            return t;
+          }
+        });
+      }
+
+      case Actiontype.Delete: {
+        return states.filter(t => t.id !== action.model.id);
+      }
+  
       default: {
         throw Error('Unknown action: ' + action.type);
       }

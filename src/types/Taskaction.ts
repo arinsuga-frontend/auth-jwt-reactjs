@@ -1,8 +1,8 @@
+import ITaskmodel from "../models/ITaskmodel"
+
 type Taskaction = {
     type: string,
-    id: number,
-    text: string,
-    done?: boolean    
+    model: ITaskmodel   
 }
 
 export default Taskaction

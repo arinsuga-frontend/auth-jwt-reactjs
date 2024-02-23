@@ -18,8 +18,7 @@ export default function AddTask() {
         setText('');
         dispatch({
           type: Actiontype.Add,
-          id: nextId++,
-          text: text
+          model: { id: nextId++, text: text}
         }); 
       }}>Add</button>
     </>
