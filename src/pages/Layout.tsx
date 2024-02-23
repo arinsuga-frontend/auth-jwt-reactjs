@@ -24,6 +24,14 @@ const Layout = () => {
                         <Link to="/counter">Counter</Link>
                     </li>
 
+                    <li>
+                        <Link to="/counter">Counter</Link>
+                    </li>
+
+                    <li>
+                        <Link to="/task">Task</Link>
+                    </li>
+
                 </ul>
             </nav>
 
