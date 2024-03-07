@@ -1,19 +1,10 @@
 import Avatar from './avatar';
 
-type profileProps = {
-    imageSource:string,
-    name:string,
-    profession:string,
-    awards:string,
-    awarddesc:string,
-    discovered:string
-  }
-
 export default function Profile({
     imageSource, name,
     profession, awards,
     awarddesc, discovered
-  }:profileProps) {
+  }) {
     return (
         <section className="profile">
           <h2>{ name }</h2>
