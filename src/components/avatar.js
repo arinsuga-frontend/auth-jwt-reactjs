@@ -1,11 +1,6 @@
 import {getImageUrl} from '../utils/utils';
 
-type avatarProps = {
-  name: string,
-  imageSource: string
-}
-
-export default function Avatar({ name, imageSource }: avatarProps) {
+export default function Avatar({ name, imageSource }) {
     return (
           <img
             className="avatar"

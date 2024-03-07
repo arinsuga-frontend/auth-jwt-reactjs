@@ -22,8 +22,6 @@
     "react-scripts": "^5.0.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.34",
-    "@types/react-dom": "^18.2.14"
   },
   "browserslist": {
     "production": [

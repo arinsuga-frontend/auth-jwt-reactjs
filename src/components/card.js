@@ -1,10 +1,6 @@
 import {ReactNode} from 'react';
 
-type cardProps = {
-  children: ReactNode
-}
-
-export default function Card({ children }: cardProps) {
+export default function Card({ children }) {
     return (
         <section className="profile">
           { children }

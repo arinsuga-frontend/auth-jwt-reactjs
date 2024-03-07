@@ -1,28 +1,20 @@
 import { createContext, useContext,
          useReducer, Dispatch } from 'react'
-import Childrennode from '../types/Childrennode'
 import Actiontype from '../enums/Actiontype'
-import { default as Statemodel } from '../models/ITaskmodel'
 import AddTask from '../components/AddTask'
 
-//State Action
-type Stateaction = {
-  type: string,
-  model: Statemodel   
-}
-
 //Initial state in production can get from database via ajax / async ajax
-const initialStates: Statemodel[] = [
+const initialStates = [
     { id: 0, text: 'Philosophers Path', done: true },
     { id: 1, text: 'Visit the temple', done: false },
     { id: 2, text: 'Drink matcha', done: false }
 ];
 
-const states: Statemodel[] = [{id: 0}];
+const states = [{}];
 const StatesContext = createContext(states)
-const StatesDispatchContext = createContext<Dispatch<Stateaction>>(() => null)
+const StatesDispatchContext = createContext(() => null)
 
-export function TasksProvider({ children }: Childrennode) {
+export function TasksProvider({ children }) {
   const [states, dispatch] = useReducer(
     tasksReducer,
     initialStates
@@ -45,7 +37,7 @@ export function useTasksDispatch() {
   return useContext(StatesDispatchContext);
 }
 
-function tasksReducer(states: Statemodel[], action: Stateaction) {
+function tasksReducer(states, action) {
     switch (action.type) {
       case Actiontype.Add: {
         return [...states, {

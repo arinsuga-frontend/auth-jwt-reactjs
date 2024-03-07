@@ -32,6 +32,10 @@ const Layout = () => {
                         <Link to="/task">Task</Link>
                     </li>
 
+                    <li>
+                        <Link to="/todo">Todo List</Link>
+                    </li>
+
                 </ul>
             </nav>
 

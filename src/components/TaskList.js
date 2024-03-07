@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useTasks, useTasksDispatch } from '../contexts/TasksContext';
-import ITaskmodel from '../models/ITaskmodel';
 import Actiontype from '../enums/Actiontype';
 import Task from './Task';
 

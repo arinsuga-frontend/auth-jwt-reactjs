@@ -2,14 +2,11 @@
 import { useState, useReducer } from "react";
 
 
-type CounterState = { count: number }
-type CounterAction = { type: string, payload: number }
-
 const initState = {
     count: 0
 }
 
-const counterReducer = (state: CounterState, action: CounterAction): CounterState => {
+const counterReducer = (state, action) => {
 
     switch (action.type) {
         case 'increment':
