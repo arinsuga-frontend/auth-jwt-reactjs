@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "http://localhost/reacttask",
+  "homepage_commented": "http://localhost/reacttask",
   "directories": {
     "doc": "doc"
   },
