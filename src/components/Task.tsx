@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useTasksDispatch } from '../contexts/TasksContext';
-import ITaskmodel from '../models/ITaskmodel';
+import ITask from '../interfaces/ITask';
 import Actiontype from '../enums/Actiontype';
 
 //props for Task function
-type Statetype = { state: ITaskmodel }
+type Statetype = { state: ITask }
 
-export default function Task({ state }: { state: ITaskmodel }) {
+export default function Task({ state }: { state: ITask }) {
     const [isEditing, setIsEditing] = useState(false);
     const dispatch = useTasksDispatch();
     let taskContent;
