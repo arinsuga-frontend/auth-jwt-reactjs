@@ -20,7 +20,7 @@ const initialStates: IState[] = [
 
 const states: IState[] = [{id: 0}];
 const StatesContext = createContext(states)
-const StatesDispatchContext = createContext<Dispatch<Stateaction>>(() => null)
+const StatesDispatchContext = createContext<Dispatch<Stateaction>>(() => Promise<any>)
 
 export function TasksProvider({ children }: Childrennode) {
   const [states, dispatch] = useReducer(
